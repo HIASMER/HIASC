@@ -1,0 +1,25 @@
+hiasc/
+├── Makefile               # Build automation
+├── README.md              # Project documentation
+├── bin/                   # Compiled binaries (created after build)
+│   └── hiasc             # Executable compiler
+├── src/                   # Source code for the compiler
+│   ├── main.c            # Entry point (CLI parsing, file I/O)
+│   ├── lexer.c           # Lexical analyzer (tokenization)
+│   ├── lexer.h           # Token definitions and lexer prototypes
+│   ├── parser.c          # Syntax analyzer (AST generation)
+│   ├── parser.h          # Parser rules and AST node definitions
+│   ├── codegen.c         # Code generator (assembly output)
+│   ├── codegen.h         # Codegen prototypes
+│   ├── symbol_table.c    # Symbol table (variables, scopes)
+│   └── symbol_table.h    # Symbol table structures
+├── include/               # Shared headers
+│   └── common.h          # Common macros, constants, and utilities
+├── tests/                 # Test suite
+│   ├── test_lexer.c      # Lexer unit tests
+│   ├── test_parser.c     # Parser unit tests
+│   └── test_codegen.c    # Codegen integration tests
+├── examples/              # Example HIASMER programs
+│   ├── factorial.hiasm   # Factorial example
+│   └── led_blink.hiasm   # LED blink example
+└── build/                 # Build artifacts (created during compilation)

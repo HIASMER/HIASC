@@ -18,9 +18,11 @@ int is_identifier_part(char c) {
 Token* tokenize(const char* input) {
     Token* tokens = malloc(1024 * sizeof(Token)); // Allocate space for tokens
     int token_count = 0;
+    int line = 1;
     const char* src = input;
 
     while (*src) {
+        if (*src == '\n') line++;
         // Skip whitespace
         if (isspace(*src)) {
             src++;

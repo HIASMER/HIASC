@@ -1,0 +1,22 @@
+// factorial.hiasm
+// Calculate the factorial of a number
+
+// Declare a register variable for the result
+reg int result = 1;
+
+// Declare a register variable for the input number
+reg int n = 5;
+
+// Function to compute factorial
+func void factorial() {
+    while (n > 1) {
+        result *= n; // Multiply result by n
+        n -= 1;     // Decrement n
+    }
+}
+
+// Main function
+func void main() {
+    factorial(); // Call the factorial function
+    // Result is stored in the 'result' register
+}
